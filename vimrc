@@ -27,6 +27,7 @@ set tabstop=4
 set guicursor=i:ver25-iCursor
 set noswapfile
 set colorcolumn=80
+set backspace=indent,eol,start
 
 colorscheme base16-default-dark
 
@@ -120,3 +121,8 @@ let g:projectionist_heuristics = {
       \                     "type": "test"}
       \ }
       \ }
+
+" Tmp files go in one place
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
