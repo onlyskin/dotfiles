@@ -13,9 +13,9 @@ let mapleader=","
 :imap ii <Esc>
 
 " java test
-" :nmap m :!<Space>gradle<Space>test<Space>--info<CR>
+:nmap <leader>m :!<Space>gradle<Space>test<Space>--info<CR>
 " python test
-:nmap m :!python<SpacE>manage.py<Space>test<CR>
+:nmap <leader>n :!python<SpacE>manage.py<Space>test<CR>
 
 set number
 syntax on
@@ -29,7 +29,7 @@ set noswapfile
 set colorcolumn=80
 set backspace=indent,eol,start
 
-colorscheme base16-default-dark
+colorscheme base16-atelier-forest
 
 " MULTIPURPOSE TAB KEY
 " source: https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
