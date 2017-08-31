@@ -9,17 +9,27 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
-let mapleader=","
-:imap ii <Esc>
+let mapleader="h"
+:imap jk <Esc>
 
 " java test
-:nmap <leader>m :!<Space>gradle<Space>test<Space>--info<CR>
+:nmap <leader>u :!<Space>gradle<Space>test<Space>--info<CR>
 " python test
-:nmap <leader>n :!python<SpacE>manage.py<Space>test<CR>
+:nmap <leader>i :!python<SpacE>manage.py<Space>test<CR>
 
 " remap half page up and half page down
 :nmap <C-J> <C-D>
 :nmap <C-K> <C-U>
+
+"disable arrow keys
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
 
 set number
 syntax on
@@ -77,7 +87,7 @@ function! SelectaFile(path, glob)
 endfunction
 
 nnoremap <leader>f :call SelectaFile(".", "*")<cr>
-nnoremap <leader>gt :call SelectaFile("src", "*")<cr>
+nnoremap <leader>g :call SelectaFile("src", "*")<cr>
 
 "Fuzzy select
 function! SelectaIdentifier()
