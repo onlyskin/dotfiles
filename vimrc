@@ -13,9 +13,13 @@ let mapleader=","
 :imap ii <Esc>
 
 " java test
-" :nmap m :!<Space>gradle<Space>test<Space>--info<CR>
+:nmap m :!<Space>gradle<Space>test<Space>--info<CR>
 " python test
-:nmap m :!python<SpacE>manage.py<Space>test<CR>
+" :nmap m :!python<SpacE>manage.py<Space>test<CR>
+
+" remap half page up and half page down
+:nmap <C-J> <C-D>
+:nmap <C-K> <C-U>
 
 set number
 syntax on
