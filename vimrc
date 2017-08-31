@@ -13,9 +13,9 @@ let mapleader=","
 :imap ii <Esc>
 
 " java test
-:nmap m :!<Space>gradle<Space>test<Space>--info<CR>
+:nmap <leader>m :!<Space>gradle<Space>test<Space>--info<CR>
 " python test
-" :nmap m :!python<SpacE>manage.py<Space>test<CR>
+:nmap <leader>n :!python<SpacE>manage.py<Space>test<CR>
 
 " remap half page up and half page down
 :nmap <C-J> <C-D>
@@ -31,8 +31,9 @@ set tabstop=4
 set guicursor=i:ver25-iCursor
 set noswapfile
 set colorcolumn=80
+set backspace=indent,eol,start
 
-colorscheme base16-default-dark
+colorscheme base16-atelier-forest
 
 " MULTIPURPOSE TAB KEY
 " source: https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
@@ -124,3 +125,8 @@ let g:projectionist_heuristics = {
       \                     "type": "test"}
       \ }
       \ }
+
+" Tmp files go in one place
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
