@@ -9,13 +9,15 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
-let mapleader="h"
-:imap jk <Esc>
+let mapleader="'"
+" :imap ji <Esc>
+
+let g:rainbow_active = 1
 
 " java test
-:nmap <leader>u :!<Space>gradle<Space>test<Space>--info<CR>
+" :nmap <leader>u :!<Space>gradle<Space>test<Space>--info<CR>
 " python test
-:nmap <leader>i :!python<SpacE>manage.py<Space>test<CR>
+:nmap <leader>i :!python<Space>manage.py<Space>test<CR>
 
 " remap half page up and half page down
 :nmap <C-J> <C-D>
@@ -42,6 +44,11 @@ set guicursor=i:ver25-iCursor
 set noswapfile
 set colorcolumn=80
 set backspace=indent,eol,start
+
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype eruby setlocal ts=2 sw=2 expandtab
+autocmd Filetype clojure setlocal lispwords+=describe,it
 
 colorscheme base16-atelier-forest
 
@@ -102,7 +109,7 @@ nnoremap <c-g> :call SelectaIdentifier()<cr>
 " PROJECTIONIST HEURISTICS
 " source: https://github.com/dirv/dotfiles/blob/master/vimrc
 let g:projectionist_heuristics = {
-      \ "Rakefile" : {
+      \ "spec/" : {
       \ "app/*.rb" : {"alternate": "spec/{}_spec.rb",
       \               "type": "app"},
       \ "lib/*.rb" : {"alternate": "spec/{}_spec.rb",
@@ -135,6 +142,27 @@ let g:projectionist_heuristics = {
       \                     "type": "test"}
       \ }
       \ }
+
+let g:rainbow_conf = {
+	\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+	\	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+	\	'operators': '_,_',
+	\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+	\	'separately': {
+	\		'*': {},
+	\		'tex': {
+	\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+	\		},
+	\		'lisp': {
+	\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+	\		},
+	\		'vim': 0,
+	\		'css': 0,
+	\		'java': 0,
+	\		'python': 0,
+	\		'ruby': 0,
+	\	}
+	\}
 
 " Tmp files go in one place
 set backup
