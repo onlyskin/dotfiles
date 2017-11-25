@@ -44,7 +44,6 @@ set noswapfile
 set colorcolumn=80
 set backspace=indent,eol,start
 
-<<<<<<< Updated upstream
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype eruby setlocal ts=2 sw=2 expandtab
@@ -141,13 +140,14 @@ let g:projectionist_heuristics = {
       \ "src/*.clj": {"alternate": "spec/{}_spec.clj",
       \               "type": "src"},
       \ "spec/*_spec.clj": {"alternate": "src/{}.clj",
-      \                     "type": "spec"}
+      \                     "type": "spec"},
       \ },
       \ "build.boot" : {
       \ "src/*.cljs": {"alternate": "test/{}_test.cljs",
       \               "type": "src"},
       \ "test/*_test.cljs": {"alternate": "src/{}.cljs",
-      \                     "type": "test"}
+      \                     "type": "test"},
+      \ },
       \ }
 
 let g:rainbow_conf = {
