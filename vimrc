@@ -145,11 +145,9 @@ let g:projectionist_heuristics = {
       \               "type": "src"},
       \ "spec/*_spec.clj": {"alternate": "src/{}.clj",
       \                     "type": "spec"},
-      \ },
-      \ "build.boot" : {
-      \ "src/*.cljs": {"alternate": "test/{}_test.cljs",
+      \ "src/*.cljs": {"alternate": "spec/{}_spec.cljs",
       \               "type": "src"},
-      \ "test/*_test.cljs": {"alternate": "src/{}.cljs",
+      \ "spec/*_spec.cljs": {"alternate": "src/{}.cljs",
       \                     "type": "test"},
       \ },
       \ }
