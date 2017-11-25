@@ -51,6 +51,10 @@ autocmd Filetype clojure setlocal lispwords+=describe,it
 
 colorscheme base16-atelier-forest
 
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 " MULTIPURPOSE TAB KEY
 " source: https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
 " Indent if we're at the beginning of a line. Else, do completion.
