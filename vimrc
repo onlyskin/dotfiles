@@ -10,14 +10,13 @@ let NERDTreeDirArrows = 1
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
 let mapleader="'"
-" :imap ji <Esc>
 
 let g:rainbow_active = 1
 
 " java test
 " :nmap <leader>u :!<Space>gradle<Space>test<Space>--info<CR>
 " python test
-:nmap <leader>i :!python<Space>manage.py<Space>test<CR>
+":nmap <leader>i :!python<Space>manage.py<Space>test<CR>
 
 " remap half page up and half page down
 :nmap <C-J> <C-D>
@@ -45,6 +44,7 @@ set noswapfile
 set colorcolumn=80
 set backspace=indent,eol,start
 
+<<<<<<< Updated upstream
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype eruby setlocal ts=2 sw=2 expandtab
@@ -109,11 +109,19 @@ nnoremap <c-g> :call SelectaIdentifier()<cr>
 " PROJECTIONIST HEURISTICS
 " source: https://github.com/dirv/dotfiles/blob/master/vimrc
 let g:projectionist_heuristics = {
-      \ "spec/" : {
+      \ "main.py" : {
+      \ "*.py": {"alternate": "test_{}.py",
+      \                          "type": "app"},
+      \ "test_*.py": {"alternate": "{}.py",
+      \                          "type": "test"},
+      \ },
+      \ "Gemfile" : {
       \ "app/*.rb" : {"alternate": "spec/{}_spec.rb",
       \               "type": "app"},
       \ "lib/*.rb" : {"alternate": "spec/{}_spec.rb",
       \               "type" : "lib"},
+      \ },
+      \ "spec/" : {
       \ "spec/controllers/*_spec.rb" : {"alternate": "app/controllers/{}.rb",
       \                                 "type": "cspec"},
       \ "js/*.js" : {"alternate": "spec/{}_spec.js",
@@ -140,7 +148,6 @@ let g:projectionist_heuristics = {
       \               "type": "src"},
       \ "test/*_test.cljs": {"alternate": "src/{}.cljs",
       \                     "type": "test"}
-      \ }
       \ }
 
 let g:rainbow_conf = {
