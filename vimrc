@@ -7,7 +7,7 @@ filetype plugin indent on
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-let g:auto_save = 1  " enable AutoSave on Vim startup
+"let g:auto_save = 1  " enable AutoSave on Vim startup
 
 let mapleader="'"
 
