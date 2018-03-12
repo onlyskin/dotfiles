@@ -92,12 +92,6 @@ nnoremap <c-g> :call SelectaIdentifier()<cr>
 " PROJECTIONIST HEURISTICS
 " source: https://github.com/dirv/dotfiles/blob/master/vimrc
 let g:projectionist_heuristics = {
-      \ "main.py" : {
-      \ "*.py": {"alternate": "test_{}.py",
-      \                          "type": "app"},
-      \ "test_*.py": {"alternate": "{}.py",
-      \                          "type": "test"},
-      \ },
       \ "Gemfile" : {
       \ "app/*.rb" : {"alternate": "spec/{}_spec.rb",
       \               "type": "app"},
