@@ -7,7 +7,7 @@ filetype plugin indent on
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-let g:auto_save = 1  " enable AutoSave on Vim startup
+"let g:auto_save = 1  " enable AutoSave on Vim startup
 
 let mapleader="'"
 " :imap ji <Esc>
@@ -129,17 +129,21 @@ let g:projectionist_heuristics = {
       \ "src/test/java/*Test.java": {"alternate": "src/main/java/{}.java",
       \                          "type": "spec"},
       \ },
+      \ "requirements.txt" : {
+      \ "*.py": {"alternate": "tests/{dirname}/test_{basename}.py",
+      \                          "type": "src"},
+      \ "tests/**/test_*.py": {"alternate": "{dirname}/{basename}.py",
+      \                          "type": "spec"},
+      \ },
       \ "project.clj" : {
       \ "src/*.clj": {"alternate": "spec/{}_spec.clj",
       \               "type": "src"},
       \ "spec/*_spec.clj": {"alternate": "src/{}.clj",
-      \                     "type": "spec"}
-      \ },
-      \ "build.boot" : {
-      \ "src/*.cljs": {"alternate": "test/{}_test.cljs",
+      \                     "type": "spec"},
+      \ "src/*.cljs": {"alternate": "spec/{}_spec.cljs",
       \               "type": "src"},
-      \ "test/*_test.cljs": {"alternate": "src/{}.cljs",
-      \                     "type": "test"}
+      \ "spec/*_spec.cljs": {"alternate": "src/{}.cljs",
+      \                     "type": "spec"}
       \ }
       \ }
 
