@@ -4,11 +4,6 @@ filetype plugin indent on
 
 let mapleader="'"
 
-" java test
-" :nmap <leader>u :!<Space>gradle<Space>test<Space>--info<CR>
-" python test
-":nmap <leader>i :!python<Space>manage.py<Space>test<CR>
-
 " remap half page up and half page down
 :nmap <C-J> <C-D>
 :nmap <C-K> <C-U>
@@ -123,6 +118,12 @@ let g:projectionist_heuristics = {
       \ "src/main/java/*.java": {"alternate": "src/test/java/{}Test.java",
       \                          "type": "src"},
       \ "src/test/java/*Test.java": {"alternate": "src/main/java/{}.java",
+      \                          "type": "spec"},
+      \ },
+      \ "requirements.txt" : {
+      \ "*.py": {"alternate": "tests/{dirname}/test_{basename}.py",
+      \                          "type": "src"},
+      \ "tests/**/test_*.py": {"alternate": "{dirname}/{basename}.py",
       \                          "type": "spec"},
       \ },
       \ "project.clj" : {
