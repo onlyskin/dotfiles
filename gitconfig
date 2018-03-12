@@ -1,0 +1,12 @@
+[user]
+	name = Sam Szreter
+	email = s.szreter@gmail.com
+[credential]
+	helper = osxkeychain
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    d = diff
