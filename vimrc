@@ -8,6 +8,8 @@ let mapleader="'"
 :nmap <C-J> <C-D>
 :nmap <C-K> <C-U>
 
+colorscheme base16-unikitty-dark
+
 "disable arrow keys
 noremap  <Up> ""
 noremap! <Up> <Esc>
