@@ -123,9 +123,13 @@ let g:projectionist_heuristics = {
       \                          "type": "spec"},
       \ },
       \ "requirements.txt" : {
-      \ "*.py": {"alternate": "tests/{dirname}/test_{basename}.py",
+      \ "**/src/*.py": {"alternate": "{dirname}/tests/test_{basename}.py",
       \                          "type": "src"},
-      \ "tests/**/test_*.py": {"alternate": "{dirname}/{basename}.py",
+      \ "**/tests/test_*.py": {"alternate": "{dirname}/src/{basename}.py",
+      \                          "type": "spec"},
+      \ "lib/*.py": {"alternate": "tests/lib/test_{}.py",
+      \                          "type": "src"},
+      \ "tests/lib/test_*.py": {"alternate": "lib/{}.py",
       \                          "type": "spec"},
       \ },
       \ "project.clj" : {
