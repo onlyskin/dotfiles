@@ -2,27 +2,13 @@ execute pathogen#infect()
 
 filetype plugin indent on
 
-"let base16colorspace=256
-set t_Co=256
-colorscheme base16-unikitty-dark
-
-" make nerdtree open automatically
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-"let g:auto_save = 1  " enable AutoSave on Vim startup
-
 let mapleader="'"
 
-" java test
-" :nmap <leader>u :!<Space>gradle<Space>test<Space>--info<CR>
-" python test
-":nmap <leader>i :!python<Space>manage.py<Space>test<CR>
-
-" remap half page up and half page down
 :nmap <C-J> <C-D>
 :nmap <C-K> <C-U>
+
+" set t_Co=256
+colorscheme base16-unikitty-dark
 
 "disable arrow keys
 noremap  <Up> ""
@@ -128,6 +114,16 @@ let g:projectionist_heuristics = {
       \ "src/main/java/*.java": {"alternate": "src/test/java/{}Test.java",
       \                          "type": "src"},
       \ "src/test/java/*Test.java": {"alternate": "src/main/java/{}.java",
+      \                          "type": "spec"},
+      \ },
+      \ "requirements.txt" : {
+      \ "**/src/*.py": {"alternate": "{dirname}/tests/test_{basename}.py",
+      \                          "type": "src"},
+      \ "**/tests/test_*.py": {"alternate": "{dirname}/src/{basename}.py",
+      \                          "type": "spec"},
+      \ "lib/*.py": {"alternate": "tests/lib/test_{}.py",
+      \                          "type": "src"},
+      \ "tests/lib/test_*.py": {"alternate": "lib/{}.py",
       \                          "type": "spec"},
       \ },
       \ "project.clj" : {
