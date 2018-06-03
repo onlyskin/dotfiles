@@ -82,7 +82,6 @@ function! SelectaFile(path, glob)
 endfunction
 
 nnoremap <leader>f :call SelectaFile(".", "*")<cr>
-nnoremap <leader>g :call SelectaFile("src", "*")<cr>
 
 "Fuzzy select
 function! SelectaIdentifier()
@@ -92,6 +91,7 @@ function! SelectaIdentifier()
   " the cursor
   call SelectaCommand("find * -type f", "-s " . @z, ":e")
 endfunction
+
 nnoremap <c-g> :call SelectaIdentifier()<cr>
 
 " PROJECTIONIST HEURISTICS
