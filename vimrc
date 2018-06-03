@@ -33,7 +33,10 @@ set colorcolumn=80
 set backspace=indent,eol,start
 
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+autocmd Filetype json setlocal ts=2 sw=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype css setlocal ts=2 sw=2 expandtab
+autocmd Filetype cpp setlocal ts=2 sw=2 expandtab
 autocmd Filetype eruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype clojure setlocal lispwords+=describe,it
 
@@ -135,6 +138,14 @@ let g:projectionist_heuristics = {
       \               "type": "src"},
       \ "spec/*_spec.cljs": {"alternate": "src/{}.cljs",
       \                     "type": "test"},
+      \ },
+      \ "package.json" : {
+      \   "src/*.js": {"alternate": "spec/{}_spec.js"},
+      \   "spec/*_spec.js": {"alternate": "src/{}.js"}
+      \ },
+      \ "tsconfig.json" : {
+      \   "src/*.ts": {"alternate": "spec/{}_spec.ts"},
+      \   "spec/*_spec.ts": {"alternate": "src/{}.ts"}
       \ },
       \ }
 

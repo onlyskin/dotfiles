@@ -11,7 +11,7 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH=/usr/local/bin:$PATH
 
-alias ll="ls -lhA"
+alias ll="ls -lhAF"
 
 # Python virtualenvwrapper configuration
 export WORKON_HOME=~/Envs
