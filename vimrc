@@ -7,7 +7,8 @@ let mapleader="'"
 :nmap <C-J> <C-D>
 :nmap <C-K> <C-U>
 
-" set t_Co=256
+let base16colorspace=256
+set t_Co=256
 colorscheme base16-unikitty-dark
 
 "disable arrow keys
