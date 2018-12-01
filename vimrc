@@ -7,6 +7,8 @@ let mapleader="'"
 :nmap <C-J> <C-D>
 :nmap <C-K> <C-U>
 
+set tabpagemax=100
+
 let base16colorspace=256
 set t_Co=256
 colorscheme base16-unikitty-dark
