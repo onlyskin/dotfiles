@@ -9,6 +9,10 @@ let mapleader="'"
 
 set tabpagemax=100
 
+"infinite undo
+set undofile
+set undodir=~/.vim/undodir
+
 let base16colorspace=256
 set t_Co=256
 colorscheme base16-unikitty-dark
