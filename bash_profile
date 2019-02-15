@@ -11,6 +11,11 @@ fi
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/bin/:$PATH
 
+export coding="/Users/Sam/Documents/Coding"
+export bin="/Users/Sam/bin"
+export tray=$coding"/elm-tray"
+export todo=$HOME"/Dropbox/Apps/Simpletask"
+
 # Python virtualenvwrapper configuration
 export WORKON_HOME=~/Envs
 # source /usr/local/bin/virtualenvwrapper.sh
