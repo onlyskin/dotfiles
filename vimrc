@@ -9,6 +9,9 @@ let mapleader="'"
 
 set tabpagemax=100
 
+" Detect elm files
+au BufRead,BufNewFile *.elm set filetype=elm
+
 "infinite undo
 set undofile
 set undodir=~/.vim/undodir

@@ -1,0 +1,1 @@
+noremap 'm :!pytest<cr>
