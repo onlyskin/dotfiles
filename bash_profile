@@ -10,6 +10,7 @@ fi
 # path modifications
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/bin/:$PATH
+export PATH='/Users/Sam/Library/Python/3.7/bin':$PATH
 
 export coding="/Users/Sam/Documents/Coding"
 export bin="/Users/Sam/bin"
