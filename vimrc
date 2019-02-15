@@ -18,14 +18,14 @@ set t_Co=256
 colorscheme base16-unikitty-dark
 
 "disable arrow keys
-noremap  <Up> ""
-noremap! <Up> <Esc>
-noremap  <Down> ""
-noremap! <Down> <Esc>
-noremap  <Left> ""
-noremap! <Left> <Esc>
-noremap  <Right> ""
-noremap! <Right> <Esc>
+" noremap  <Up> ""
+" noremap! <Up> <Esc>
+" noremap  <Down> ""
+" noremap! <Down> <Esc>
+" noremap  <Left> ""
+" noremap! <Left> <Esc>
+" noremap  <Right> ""
+" noremap! <Right> <Esc>
 
 set number
 syntax on
@@ -85,7 +85,7 @@ function! SelectaCommand(choice_command, selecta_args, vim_command)
 endfunction
 
 function! SelectaFile(path, glob)
-  call SelectaCommand("find " . a:path . "/* -type f -and -iname '" . a:glob . "' -and -not -iname '*.pyc' -and -not -iname '*.swp' -and -not -iname '*.DS_Store'", "", ":e")
+  call SelectaCommand("find " . a:path . "/* -type f -and -iname '" . a:glob . "' -and -not -iname '*.pyc' -and -not -iname '*.swp' -and -not -iname '*.DS_Store' -and -not -iname 'node_modules/*'", "", ":e")
 endfunction
 
 nnoremap <leader>f :call SelectaFile(".", "*")<cr>
