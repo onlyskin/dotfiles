@@ -163,3 +163,5 @@ let g:projectionist_heuristics = {
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
+highlight LineNr ctermbg=black
