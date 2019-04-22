@@ -2,6 +2,11 @@
 
 alias ll="ls -lhAFG"
 
+# aliased locations
+export todo=~/Dropbox/Apps/Simpletask
+export notes=~/Dropbox/_ZETTELKASTEN
+export coding=~/Coding
+
 # git autocompletion
 if [ -f ~/.git-completion.bash ]; then
       . ~/.git-completion.bash
