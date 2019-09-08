@@ -2,7 +2,7 @@ execute pathogen#infect()
 
 filetype plugin indent on
 
-let mapleader="'"
+let mapleader="8"
 
 :nmap <C-J> <C-D>
 :nmap <C-K> <C-U>
@@ -20,6 +20,9 @@ let base16colorspace=256
 set t_Co=256
 colorscheme base16-unikitty-dark
 
+nnoremap <leader>w :w<cr>
+noremap <leader>q :q<cr>
+noremap <leader>x :x<cr>
 "disable arrow keys
 " noremap  <Up> ""
 " noremap! <Up> <Esc>
