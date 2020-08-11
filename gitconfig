@@ -4,9 +4,14 @@
 [credential]
 	helper = osxkeychain
 [alias]
-    st = status
+    a = add
+    aa = add .
+    dc = diff --cached
+    s = status
+    p = push
     ci = commit
     co = checkout
+    ca = commit --amend
     br = branch
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     d = diff
