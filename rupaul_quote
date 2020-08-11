@@ -1,0 +1,9 @@
+#!/bin/bash
+
+choice=$RANDOM
+quotes_length=`cat .quotes.json | jq '. | length'`
+let "choice %= "$quotes_length
+quote=$(cat .quotes.json | jq -r ".["$choice"]")
+echo
+echo "“"$quote"”"
+echo

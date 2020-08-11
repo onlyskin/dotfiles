@@ -1,3 +1,5 @@
+./.rupaul_quote
+
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
 alias ll="ls -lhAFG"
@@ -6,6 +8,8 @@ alias ll="ls -lhAFG"
 export todo=~/Dropbox/Apps/Simpletask
 export notes=~/Dropbox/_ZETTELKASTEN
 export coding=~/Coding
+export harp=$coding/harp-notes
+export polish=$coding/polish-training
 
 # git autocompletion
 if [ -f ~/.git-completion.bash ]; then
@@ -14,10 +18,11 @@ fi
 
 # path modifications
 export PATH=/usr/local/bin:$PATH
-export PATH=$HOME/bin/:$PATH
+export PATH=$HOME/bin:$PATH
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/lib/ruby/gems/2.6.0/bin:$PATH"
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Python virtualenvwrapper configuration
 export WORKON_HOME=~/Envs
@@ -47,3 +52,10 @@ if [ -f '/Users/sam/google-cloud-sdk/path.bash.inc' ]; then . '/Users/sam/google
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/sam/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/sam/google-cloud-sdk/completion.bash.inc'; fi
+export PATH="/usr/local/sbin:$PATH"
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
+  [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
